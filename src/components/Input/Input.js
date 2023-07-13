@@ -10,7 +10,6 @@ function Input({ id, placeholder, type, name }) {
         type={type}
         name={name}
         id={id}
-        value={name}
         placeholder={placeholder}
         required
         minLength="2"

@@ -17,7 +17,6 @@ function SearchForm({ headerType, children }) {
             type="text"
             name="inputString"
             id="inputString"
-            value=""
             placeholder="Фильм"
             required
           ></input>

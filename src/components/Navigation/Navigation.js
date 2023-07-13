@@ -6,9 +6,17 @@ import buttonClose from "../../images/buttonClose.svg";
 import account from "../../images/account.svg";
 
 function Navigation({ closeMenu, navigationMovies, navigationSavedMovies }) {
+
+  // обработчик оверлея
+  const handleOverlay = (e) => {
+    if (e.target === e.currentTarget) {
+      closeMenu();
+    }
+  };
+
   return (
     <div className="navigation">
-      <div className="navigation__container-overlay"></div>
+      <div className="navigation__container-overlay" onClick={handleOverlay}></div>
       <div className="navigation__contaner">
         <button className="navigation__button-close" onClick={closeMenu}>
           <img

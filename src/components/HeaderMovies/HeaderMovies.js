@@ -24,6 +24,18 @@ function HeaderMovies({
     setIsMenuOpen(false);
   }
 
+  React.useEffect(() => {
+    if (!isMenuOpen) return;
+    const closeByEscape = (e) => {
+      if (e.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("keydown", closeByEscape);
+    return () => document.removeEventListener("keydown", closeByEscape);
+  }, [isMenuOpen, closeMenu]);
+
   return (
     <Header headerType="headerMovies__tipe_movies">
       <nav className="headerMovies__link">
