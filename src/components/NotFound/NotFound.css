@@ -46,6 +46,10 @@
     border: none;
 }
 
+.not-found__button-back:hover {
+    opacity: .6;
+}
+
 @media screen and (max-width: 800px) {
     .notFound {
         padding: 408px 0 222px;

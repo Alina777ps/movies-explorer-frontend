@@ -56,6 +56,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-decoration: none;
+}
+
+.header__list_item:hover {
+    opacity: .6;
 }
 
 @media screen and (max-width: 800px) {

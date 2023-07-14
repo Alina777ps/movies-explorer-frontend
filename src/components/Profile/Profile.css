@@ -79,7 +79,7 @@
 }
 
 .profile__button-edit:hover {
-    font-weight: 500;
+    opacity: .6;
 }
 
 .profile__signaut {
@@ -96,7 +96,7 @@
 }
 
 .profile__signaut:hover {
-    font-weight: 600;
+    opacity: .6;
 }
 
 @media screen and (max-width: 900px) {

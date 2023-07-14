@@ -16,8 +16,8 @@ function Promo() {
       </p>
       <div className="promo__frame-link">
         <Link
-          className="promo__link"
           to="aboutProject"
+          className="promo__link"
           smooth={true}
           duration={500}
         >

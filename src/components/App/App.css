@@ -26,30 +26,3 @@
 .page__container_blue {
   background-color: #073042;
 }
-/*
-.page__container_black {
-  margin: 0;
-  padding: 0;
-  padding: 0 5.5%;
-  background-color: #202020;
-}
-
-@media screen and (max-width: 900px) {
-  .page__container_blue {
-    padding: 0 3.9%;
-  }
-  
-  .page__container_black {
-    padding: 0 6.5%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .page__container_blue {
-    padding: 0 3.1%;
-  }
-  
-  .page__container_black {
-    padding: 0 5.6%;
-  }
-}*/

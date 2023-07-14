@@ -6,6 +6,7 @@ import Logo from "../Logo/Logo.js";
 function Form({
   formTitle,
   buttonName,
+  formSubmitType,
   formQuestion,
   formLinkName,
   formLink,
@@ -15,9 +16,9 @@ function Form({
     <div className="form">
       <Logo />
       <h1 className="form__title">{formTitle}</h1>
-      <form className="form__form" noValidate>
+      <form className="form__form">
         <fieldset className="form__fieldset">{children}</fieldset>
-        <button className="form__submit" type="submit" aria-label={buttonName}>
+        <button className={`form__submit ${formSubmitType}`} type="submit" aria-label={buttonName}>
           {buttonName}
         </button>
       </form>

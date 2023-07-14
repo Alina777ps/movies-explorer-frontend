@@ -59,7 +59,7 @@
 }
 
 .aboutMe__link-Github:hover {
-    font-weight: 600;
+    opacity: .6;
 }
 
 @media screen and (max-width: 1000px) {
@@ -103,7 +103,7 @@
 
     .aboutMe__photo {
         position: static;
-        margin: 60px 0 40px;
+        margin: 60px 0 35px;
         width: 292px;
         height: 352px;
 

@@ -8,7 +8,9 @@ import Portfolio from "../Portfolio/Portfolio.js";
 
 function AboutMe() {
   return (
-    <Section sectionType="AboutMe" sectionTitle="Студент">
+    <Section 
+      sectionType="aboutMe" 
+      sectionTitle="Студент">
       <img className="aboutMe__photo" src={AboutMePhoto} alt="Фото" />
       <h3 className="aboutMe__name">Алина</h3>
       <h4 className="aboutMe__job">Фронтенд-разработчик, 35 лет</h4>

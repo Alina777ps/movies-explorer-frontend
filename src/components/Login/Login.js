@@ -9,6 +9,7 @@ function Login() {
     <Form
       formTitle="Рады видеть!"
       buttonName="Войти"
+      formSubmitType="form__Submit_login"
       formQuestion="Ещё не зарегистрированы?"
       formLinkName="Регистрация"
       formLink="/signup"

@@ -3,18 +3,30 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <h2 className="footer__title">
         Учебный проект Яндекс.Практикум х BeatFilm.
       </h2>
       <div className="footer__line">
-        <p className="header__data">© 2020</p>
+        <p className="header__data">© 2023</p>
         <ul className="header__list">
-          <li className="header__list_item">Яндекс.Практикум</li>
-          <li className="header__list_item">Github</li>
+          <a
+            className="header__list_item"
+            href="https://practicum.yandex.ru/"
+            target="_blank"
+          >
+            Яндекс.Практикум
+          </a>
+          <a
+            className="header__list_item"
+            href="https://github.com/"
+            target="_blank"
+          >
+            Github
+          </a>
         </ul>
       </div>
-    </div>
+    </footer>
   );
 }
 

@@ -10,12 +10,14 @@ import Footer from "../Footer/Footer.js";
 
 function Main() {
   return (
-    <div className="main">
+    <div>
       <HeaderMain />
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
+      <main>
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+      </main>
       <Footer />
     </div>
   );

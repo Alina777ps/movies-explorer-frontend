@@ -51,6 +51,7 @@
 
 .moviesCard__button:hover {
     transform: scale(1.2, 1.2);
+    opacity: .6;
 }
         
 .moviesCard__img {

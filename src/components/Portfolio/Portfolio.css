@@ -49,11 +49,16 @@
 }
 
 .portfolio__link:hover {
-    font-weight: 500;
+    opacity: .6;
+}
+
+.portfolio__arrow {
+    
 }
 
 .portfolio__arrow:hover {
     transform: scale(1.2, 1.2);
+    opacity: .6;
 }
 
 @media screen and (max-width: 1000px) {
@@ -84,5 +89,10 @@
         letter-spacing: -0.72px;
     }
 
+    .portfolio__arrow {
+        width: 10px;
+        margin-right: 5px;
+    
+    }
     
 }

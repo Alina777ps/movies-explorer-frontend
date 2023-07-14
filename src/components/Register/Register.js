@@ -1,5 +1,4 @@
 import React from "react";
-import "./Register.css";
 
 import Form from "../Form/Form.js";
 import Input from "../Input/Input.js";

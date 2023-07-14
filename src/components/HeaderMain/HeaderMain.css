@@ -35,7 +35,7 @@
 }
 
 .header__signup:hover, .header__signin:hover {
-    font-weight: 600;
+    opacity: .6;
 }
 
 @media screen and (max-width: 900px) {
