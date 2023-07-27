@@ -11,7 +11,7 @@ function MoviesCardList({
   onDeleteMovie,
   onAddMovie,
   movies,
-  isSavedMovie, //isSavedFilm
+  isSavedMovie,
   savedMovies,
   isLoading,
   isNotFoundMovie,
@@ -77,7 +77,7 @@ function MoviesCardList({
                   <MoviesCard
                     key={movie.id}
                     movie={movie}
-                    isSavedMovie={isSavedMovie} //isSavedFilm
+                    isSavedMovie={isSavedMovie}
                     savedMovies={savedMovies}
                     onDeleteMovie={onDeleteMovie}
                     onAddMovie={onAddMovie}
@@ -105,7 +105,7 @@ function MoviesCardList({
                   <MoviesCard
                     key={isSavedMovie ? movie._id : movie.id}
                     movie={movie}
-                    isSavedMovie={isSavedMovie} //isSavedFilm
+                    isSavedMovie={isSavedMovie}
                     savedMovies={savedMovies}
                     onDeleteMovie={onDeleteMovie}
                     saved={showSavedMovie(savedMovies, movie)}

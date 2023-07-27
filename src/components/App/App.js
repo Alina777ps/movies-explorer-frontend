@@ -37,24 +37,20 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
- /*React. useEffect(() => {
-  setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);*/
-
   function handleSubmitRegister(name, email, password) {
+    setIsLoading(true);
     auth
       .register(name, email, password)
       .then((user) => {
-        setLoggedIn(true);
         setCurrentUser(user);
         handleSubmitLogin(email, password)
       })
       .catch((err) => {
         setErrorMessege(err);
-      });
+      })
+      .finally(() => {
+        setIsLoading(false);
+      })
   }
 
   function handleSubmitLogin(email, password) {
@@ -85,21 +81,24 @@ function App() {
   const tokenCheck = () => {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
+      setLoggedIn(true);
       auth
         .checkToken(jwt)
         .then((res) => {
-          setLoggedIn(true);
           setIsTokenChecked(true);
           navigate("/movies", { replace: true });
+      }) 
+        .catch((error) => console.log(`Произошла ошибка: ${error}`))
+        .finally(() => {
+          setIsLoading(false);
         })
-        .catch((error) => console.log(`Произошла ошибка: ${error}`));
-    }
+    } else {navigate("/", { replace: true })}
   };
 
   //проверяем токен
   React.useEffect(() => {
     tokenCheck();
-    //navigate(location.pathname, { replace: true });
+    navigate(location.pathname, { replace: true });
   }, []);
 
 //проверяем токен
@@ -149,12 +148,12 @@ function App() {
   }, [loggedIn]);
 
   //редактирование профиля
-  function handleUpdateUser(newUserInfo) {
+  function handleUpdateUser(data) {
     setIsLoading(true);
     mainApi
-      .setUserInfo(newUserInfo)
+      .setUserInfo(data)
       .then((user) => {
-        setCurrentUser(user);
+        setCurrentUser(user.user);
       })
       .catch((err) => {
         console.log(err)
@@ -164,11 +163,11 @@ function App() {
 
   // добавляем новый фильм newMovie в список сохраненных фильмов в начало списка
   function onAddMovie(movie) {
+    
     mainApi
       .addNewMovies(movie)
       .then((newMovie) => {
-        setSavedMovies([newMovie, ...savedMovies])
-        console.log(newMovie)
+        setSavedMovies([newMovie.movie, ...savedMovies])
       })
       .catch((err) => {
         console.log(`Произошла ошибка: ${err}`)
