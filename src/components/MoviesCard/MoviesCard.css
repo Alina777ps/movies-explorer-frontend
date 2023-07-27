@@ -39,7 +39,7 @@
     line-height: normal;
     grid-area: time;
 }
-
+/*
 .moviesCard__button {
     margin: 0;
     padding: 0;
@@ -53,11 +53,49 @@
     transform: scale(1.2, 1.2);
     opacity: .6;
 }
-        
+ */
+ 
+ .moviesCard__button-delete {
+    background-image: url("../../images/deleteButton.svg");
+ }
+
 .moviesCard__img {
+    max-width: 220px;
     margin: 0;
     padding: 6px;
     object-fit: cover;
+}
+
+.moviesCard__button {
+    margin: 0;
+    padding: 0;
+    grid-area: button;
+    width: 14px;
+    height: 12px;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.moviesCard__button:hover {
+    transform: scale(1.2, 1.2);
+    opacity: .6;
+}
+
+
+.moviesCard__like-active {
+    background-image: url("../../images/like.svg");
+  }
+  
+  .moviesCard__like {
+    background-image: url(../../images/dislike.svg);
+  }
+
+  
+.moviesCard__button-delete {
+    background-image: url(../../images/deleteButton.svg);
 }
 
 @media screen and (max-width: 600px) {
@@ -91,7 +129,7 @@
 
     .moviesCard__img {
         padding: 0;
-        width: 300px;
+        max-width: 300px;
         height: 168px;
     }
     

@@ -4,21 +4,37 @@ import "./Form.css";
 import Logo from "../Logo/Logo.js";
 
 function Form({
+  name,
   formTitle,
   buttonName,
-  formSubmitType,
+  //formSubmitType,
   formQuestion,
   formLinkName,
   formLink,
   children,
+  handleSubmit,
+  errorMessege,
+  isDisabled,
+  isLoading
 }) {
   return (
-    <div className="form">
+    <div className="form__container">
       <Logo />
       <h1 className="form__title">{formTitle}</h1>
-      <form className="form__form">
+      <form className="form__form" onSubmit={handleSubmit} id="form" noValidate>
         <fieldset className="form__fieldset">{children}</fieldset>
-        <button className={`form__submit ${formSubmitType}`} type="submit" aria-label={buttonName}>
+        <p className="form__erorr">{errorMessege}</p>
+        <button
+          className={
+            isDisabled || isLoading
+              ? "form__submit form__submit_inactive"
+              : "form__submit"
+        }
+         //${formSubmitType}
+          type="submit" 
+          aria-label={buttonName} 
+          disabled={isDisabled ? true : false}
+        >
           {buttonName}
         </button>
       </form>
