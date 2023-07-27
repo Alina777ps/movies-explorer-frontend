@@ -41,6 +41,14 @@
     line-height: 20px;
     border: none;
 }
+
+.searchForm__input-string:focus {
+    background: #2F2F2F;
+  }
+
+  .searchForm__input-error {
+    color: #EE3465;
+}
                      
 .searchForm__button {
     margin: 0;
@@ -53,10 +61,6 @@
 .searchForm__button:hover {
     transform: scale(1.2, 1.2);
     opacity: .6;
-}
-
-.searchForm__button-img {
-
 }
 
 @media screen and (max-width: 900px) {

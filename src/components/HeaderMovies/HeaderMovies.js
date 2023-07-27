@@ -51,7 +51,7 @@ function HeaderMovies({
       </nav>
       <nav className="headerMovies__profile-link">
         <Link className="headerMovies__account" to="/profile">
-          <a className="headerMovies__account-name">Аккаунт</a>
+          <p className="headerMovies__account-name">Аккаунт</p>
           <div className="headerMovies__account-img-frame">
             <img
               className="headerMovies__account-img"

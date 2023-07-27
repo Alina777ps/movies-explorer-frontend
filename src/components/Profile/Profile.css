@@ -18,40 +18,48 @@
     line-height: normal;
 }
 
-.profile__info-block {
-    margin: 123px 0 220px;
+.profile__form {
+    margin: 123px 0 16px;
     padding: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.profile__info-line {
+.profile__fieldset {
+    border: none;
+    padding: 0;
+    margin: 123px 0 220px;
+}
+
+.profile__label {
     width: 100%;
     margin: 0 0 17px;
-    padding: 0 0 16px;
+    padding: 0 0 4px;
     border: none;
     border-bottom: 1px solid #424242;
-    display: flex;
-    justify-content: space-between;
-}
-
-.profile__info-line:last-child {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-              
-.profile__data-name {
-    margin: 0;
-    padding: 0;
     color: #FFF;
+    text-align: left;
     font-family: "Inter", "Arial", sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
 }
 
-.profile__data {
+.profile__label:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile__input {
+    width: 360px;
     margin: 0;
     padding: 0;
     color: #FFF;
@@ -61,6 +69,26 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    background: #202020;
+    border: none;
+}
+
+.profile__input:focus {
+    background: #2F2F2F;
+  }
+
+.profile__input-error {
+    height: 12px;
+    color: #EE3465;
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    text-align: right;
 }
                   
 .profile__button-edit {
@@ -77,13 +105,17 @@
     border: none;
     cursor: pointer;
 }
+/*
+.profile__button-edit_inactive {
+    color: #EE3465;
+}*/
 
 .profile__button-edit:hover {
     opacity: .6;
 }
 
 .profile__signaut {
-    margin: 16px 0 0;
+    margin: 0;
     padding: 0;
     text-decoration: none;
     color: #EE3465;
@@ -93,6 +125,9 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    background: #202020;
+    border: none;
+    cursor: pointer;
 }
 
 .profile__signaut:hover {

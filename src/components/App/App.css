@@ -2,10 +2,8 @@
   margin: 0;
   padding: 0;
   background: #202020;
-}
-
-.page__container_blue {
-  background-color: #073042;
+  min-height: 100vh;
+  
 }
 
 .page__container {
